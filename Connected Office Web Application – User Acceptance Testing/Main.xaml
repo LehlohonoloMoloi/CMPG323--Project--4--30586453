@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1104,22671" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1104,26480" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1114,22606" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1114,26415" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="zoneData" />
       <Variable x:TypeArguments="sd:DataTable" Name="categoryData" />
@@ -128,7 +128,11 @@
       <Variable x:TypeArguments="sd:DataTable" Name="zoneScrape" />
       <Variable x:TypeArguments="sd:DataTable" Name="categoryScrape" />
       <Variable x:TypeArguments="sd:DataTable" Name="deviceScrape" />
-      <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
+      <Variable x:TypeArguments="x:Int32" Name="count">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -200,44 +204,44 @@
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence DisplayName="Browser sequence" sap:VirtualizedContainerService.HintSize="1052,21467" sap2010:WorkflowViewState.IdRef="Sequence_21">
+    <Sequence DisplayName="Browser sequence" sap:VirtualizedContainerService.HintSize="1052,25276" sap2010:WorkflowViewState.IdRef="Sequence_21">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="990,97" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="990,21208" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="990,25017" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="956,21112" sap2010:WorkflowViewState.IdRef="Sequence_78">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="956,24921" sap2010:WorkflowViewState.IdRef="Sequence_78">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="894,20990" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Connected Office Test Data.xlsx">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="894,24799" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Connected Office Test Data.xlsx">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860,20712" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860,24521" sap2010:WorkflowViewState.IdRef="Sequence_79">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="798,20590" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="Simulate" ScopeGuid="206974de-e551-4525-9544-13675a1e4cc3" Version="V2">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="798,24399" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="Simulate" ScopeGuid="206974de-e551-4525-9544-13675a1e4cc3" Version="V2">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764,20364" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764,24173" sap2010:WorkflowViewState.IdRef="Sequence_20">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -839,7 +843,272 @@
                                   </ui:ForEachRow>
                                 </Sequence>
                               </Sequence>
-                              <Sequence DisplayName="Edit sequence" sap:VirtualizedContainerService.HintSize="702,6326" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                              <Sequence DisplayName="Read Sequence" sap:VirtualizedContainerService.HintSize="702,4066" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Zone Sequence" sap:VirtualizedContainerService.HintSize="592,1287" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
+                                      <Variable.Default>
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">new System.Data.DataTable();</CSharpValue>
+                                      </Variable.Default>
+                                    </Variable>
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Zones'" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NClick_58" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones" DesignTimeRectangle="8, 286, 200, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Zones'" FullSelectorArgument="&lt;webctrl aaname='Zones' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Zones' tag='A' type='' class='nav-link text-dark' check:innerText='Zones' /&gt;" Guid="329de68d-efd8-477b-ba88-e8321e5c6bfe" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIwSURBVHhe7dixUeNQAIThK+qii4gdkrgCYmbogAagBDqADmjBHdAD18A7sHath97TypoTzMD8O/MlSDYE+i2ZX15528vfVwAdnnIhGCDxlAvBAImnXAgGSDzlQjBA4ikXggEST7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUywbBPN6U338uoqvHzuuAb8BTLgQDJJ5y+aRHsiqi3d2hfw7wDXjK5TOCeSpXvrtc3pfnyfHnu/0ppsG+3B56x2/KQ/1eb5o71eG+7Krjw2vG40u/C1jiKZetgzmU28v+xfvxWMsxjBf5vuya86v3nH0UHM5pY3lHMFjHUy7bBlNfpM3doLrAx2NVRLob1e/hx7n2favXXT817/V+zsO1jnfucsC5POWyYTAL31vGi37usWl6Z6jOqx69hmA+PqpNHX9/cwfi7oL1POWyUTD1d4mZT/TTJ/4WwTTfXSZ81+mcxz8hsIanXLYIpv5uEj7FVz+SnXmHOT2SJb1HOGCZp1z+P5jxzjFvuMjrsFqO6Lxg6vMmFN7c3zXGCizzlMtXBjN3fn5EO/68E8xR7z9lIRhiwVqectnwSz/wA3nKhWCAxFMuBAMknnIhGCDxlAvBAImnXAgGSDzlQjBA4ikXggEST7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQDKslH9/YIAlHoxPVQAAAABJRU5ErkJggg==" InformativeScreenshot="514aa0cc6e640279ebd462576152c828.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zones - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target DesignTimeRectangle="8, 213, 200, 40" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl aaname='Home' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home' tag='A' type='' class='nav-link text-dark' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVHhe7dixTcNQAIRhhqKiok6ZJhNQI7FBFiAjZINkg6yQDdgBFnjY+C5+NubAIpIR+k/6GtsyFPllJzdeafby9gpggqdcCAZIPOVCMEDiKReCARJPuRAMkHjKhWCAxFMuBAMknnIhGCDxlAvBAImnXAgGSDzlQjBA4ikXggEST7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85XKdYPaP9+X2rrHeldPo3Ol50527eyr70Tngr/OUC8EAiadcCAZIPOWyZDDH8vBxvPJ4nDy/ej5X9+mvu/zd6lhtcL7R3md8DZB4yuXKwURVMIenifNyia4KZl3FEo49HPw/nct2PTxnRIM5POWyRDDVh7l+IlURdR/86gnk6867svIx3686donhcq9N2Z7be1XHJp6CwFc85bLEK9nwVau/dnx86rqfHRu8vn0yfjUEvuYplwWCmXoifLheMPmJVz11gG94ymWJJ8z8V7K5wfR/kzjwO55yWSKYxtwv/TODqY+N9T8MAN/zlMtCwbQGX+A7/Qe+9ZtgWtO/lBEM5vCUy3WCAf4rT7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUC8EAiadcCAZIupXyDoZKhj2ImcU3AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Zone Name' ReferenceName='Zone Name' ReferenceIdx='0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Zone Name Url' ReferenceName='Zone Name Url' ReferenceIdx='1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Zone Description' ReferenceName='Zone Description' ReferenceIdx='2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Date Created' ReferenceName='Date Created' ReferenceIdx='3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3' ReferenceName='Column-3' ReferenceIdx='4'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3 Src' ReferenceName='Column-3 Src' ReferenceIdx='5'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3 Url' ReferenceName='Column-3 Url' ReferenceIdx='6'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4' ReferenceName='Column-4' ReferenceIdx='7'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4 Src' ReferenceName='Column-4 Src' ReferenceIdx='8'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4 Url' ReferenceName='Column-4 Url' ReferenceIdx='9'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5' ReferenceName='Column-5' ReferenceIdx='10'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5 Src' ReferenceName='Column-5 Src' ReferenceIdx='11'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5 Url' ReferenceName='Column-5 Url' ReferenceIdx='12'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Zone Name' attr='text' name2='Zone Name Url' attr2='href' /&gt;&lt;column name='Zone Description' attr='text' /&gt;&lt;column name='Date Created' attr='text' /&gt;&lt;column name='Column-3' attr='text' name2='Column-3 Src' attr2='src' name3='Column-3 Url' attr3='href' /&gt;&lt;column name='Column-4' attr='text' name2='Column-4 Src' attr2='src' name3='Column-4 Url' attr3='href' /&gt;&lt;column name='Column-5' attr='text' name2='Column-5 Src' attr2='src' name3='Column-5 Url' attr3='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NExtractData_13" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NExtractData.DataTable>
+                                      <InOutArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">ExtractDataTable</CSharpReference>
+                                      </InOutArgument>
+                                    </uix:NExtractData.DataTable>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="238, 294, 1119, 100" DesignTimeScaleFactor="1" FriendlyName="'Zone Name'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="61d6b5d7-f045-4313-ab74-7a65f90e34ba" InformativeScreenshot="0660b6edab5fed9dadbd43098dfe2609.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zones - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,753" sap2010:WorkflowViewState.IdRef="ForEachRow_16">
+                                    <ui:ForEachRow.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,627" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_11" Version="V3">
+                                            <uix:NGoToUrl.Url>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">CurrentRow["Column-4 Url"].ToString()</CSharpValue>
+                                              </InArgument>
+                                            </uix:NGoToUrl.Url>
+                                          </uix:NGoToUrl>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_59" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones/Details/5bc06f10-68e9-4d95-8a45-42e60be2ed8e" DesignTimeRectangle="335, 408, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="12f015ce-361d-4b1c-852d-dd3bd33d724c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZW7ccMwDEBzl1k0jtbwDPYWGkKN9/ACblyosRtXLj0AQvEjgSAo6gNHuQveHQvKDD6PkPIFiigqVBgVKowKFUaFCqNChVGhwvy+0Msdvg93aP32T2Fr6+D48PsVEKEvqA83ExSvbQkSdhbaNqan5uV3hE8JrS9+a7ieO1kBi4W+4Xi6QXV++/02JoUuwHo5PeHq94GiUPdMcEr/vdDHEyoq1D4LnwSzmMBustGZ0AQVGmIxMZI8ZkVibSz0OxeDUH7lmdqi+O6Cc3kLQvnpaBs8YT4BKtIWHU2hicsKdfmmp4+vwV1YfNFp3pT5QhkXzShu0YRG9gsF9kTBuYnGDEX7XLnmBjihtNlA7vnIbKGFPja+8mmRbhrQCsH7ophEA7boDioy1XkYobYm/qL7uqYmfv6Eoh6Z8+uFGqIiwncFJYmCLxE6dW5gP6EOl5+KFRPKBYqeFV6VsWhfaFHqTq88hfy2Xih95WnSMLEouC06KszEDU1Efz9PKifBNkQuzp5bEWsA12b6qvEl0r7p3jPjn1I6bU6YX6aBlrmt6IxZ2QsZck5Mdbg0s/CkOqkoT04Ugtblls9NhIacblF56FOAeidCla2oUGFUqDAqVBgVKowKFQXgByJRGuzqi/YZAAAAAElFTkSuQmCC" InformativeScreenshot="3633daea0f6d92df7206891a85399159.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zone Details - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <uix:Target DesignTimeRectangle="277, 408, 46, 21" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='A' type='' class='' check:innerText='Delete' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFHSURBVFhH7ZPBDcIwDACRmIVxWIMZYIsO0Q97sEA/ffChn776ZADT2m5xHKdpKyECykmRCEljX+zs4E/IIqmRRVIji6TGB0WecL7UcLg+ef5ZXJGmhcOphr03HlDyluV8XeQO54bnTHW9o9C6pDaI3B4bL22hCIJBAmsmqYqYiXVwlC14aaHilZBIWYj9Ipb7/zCk0FwcYoUIBys6ntHhxxtPe3B9CuKLuN/36CqbFYnFIVaJ4FvhROTvCed7JYJrOkm1xxCJxyE2VwR/y3JPIyCCSVr750XicYjVb2Qs8RBAto2PIWL0tkNAZD4OsVgESywS0XMfq7XC1UZCrRW7gJ4FIpSQ9whxr76t/mFO/axExnNUUmUhzrXiR+MQhojsQxrB0nr7ZRJaZGC8lPfQZ7/fhBaU3/mVdUV+mCySGlkkNf5EBOAFhHxsUXbl/R4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_14">
+                                            <ueab:WriteCellX.Cell>
+                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">Excel.Sheet["Test Results"].Cell["C2"]</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Cell>
+                                            <ueab:WriteCellX.Value>
+                                              <InArgument x:TypeArguments="x:Object">
+                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">"TRUE"</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Value>
+                                          </ueab:WriteCellX>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEachRow.Body>
+                                    <ui:ForEachRow.DataTable>
+                                      <InArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">ExtractDataTable</CSharpValue>
+                                      </InArgument>
+                                    </ui:ForEachRow.DataTable>
+                                  </ui:ForEachRow>
+                                </Sequence>
+                                <Sequence DisplayName="Category Sequence" sap:VirtualizedContainerService.HintSize="592,1288" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
+                                      <Variable.Default>
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">new System.Data.DataTable();</CSharpValue>
+                                      </Variable.Default>
+                                    </Variable>
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Categories'" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NClick_60" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones/Details/5bc06f10-68e9-4d95-8a45-42e60be2ed8e" DesignTimeRectangle="8, 359, 200, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Categories'" FullSelectorArgument="&lt;webctrl aaname='Categories' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Categories' tag='A' type='' class='nav-link text-dark' check:innerText='Categories' /&gt;" Guid="3249d2ed-dcb7-4bad-b456-a4cfc1c707cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMcSURBVHhe7ZfBcdswEEVTVE455eyjL65AZ8+4Azdgl+AOrA7cgjpID0kDDCHuBwEQWIoRJxbp92feQQIgUTP7sKtvStfn15/fAFBBMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QZjHvT933Hz97nrq32jrsCsV0WVmY02t3dy6mnMN7Ze9GeXvU73ronk/1PbAfFNNlPWHGQpqyRJiPl4fh3OOxuv7p0GG+FIrpso4wscgD96/dR7reF9jlwpy653v7nFsVBr4UiumyhjDH7tCSpaDWhe5eTsN6Y5yL65Xz6VrtMw7v47Ple5NnFpmg6bljlDiIP14OeYfJLo1AIfxknZFuEyimywrCxBFlbvRKukfBuZhdYWbOhs9vnBdxX/K8E6LwFaF6WsI0x1GTZipLAGG2gGK6XC9MWgxL/qsEYqHFQm2MZLHIkyLTe3Z2LNqxkNNnm4iXdsOJ9KkwrU5i7yeixt8f3xv2TH8nbAXFdPmfHaZ10/bMCNM8dyYUZUO0bLQKwpSv5/e1RysTxutYEnyyh+6yFRTTZQVh0lGoKK6MtGhs36UdpjnynAnF1yrwQoTkWS8VJt83FcaXudZ1RsrPhttDMV3W+NOfFHmgciOHoomFFddr49Fch2ndzOkz2M3fkxbzUJy17+xxRrI5YZZ02IH6b4TbRDFd1hAmkNzwFTJhaiTFW3aT8sYviUXqjkZJ4Xv74nMsECaTNUdnWx3yMsHgM1FMl7WEGahLMd74aeGEYpqOZIFcjrFg64WZFl3+/eF7G4U/Ox4tEWagJoXO1taQZRsopsu6wtwci8clgBzFdNmRMH3XODS6RNkNAC5FMV32JUw5Zgm6C/wriumyd2HoLHAdiumy8/8wAFeimC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+AxpOv+Avrq7eEJ9xenAAAAAElFTkSuQmCC" InformativeScreenshot="3252c2008aae2830b309ad57dba1c97e.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zone Details - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target DesignTimeRectangle="8, 286, 200, 40" ElementType="Text" FriendlyName="'Zones'" FullSelectorArgument="&lt;webctrl aaname='Zones' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Zones' tag='A' type='' class='nav-link text-dark' check:innerText='Zones' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIwSURBVHhe7dixUeNQAIThK+qii4gdkrgCYmbogAagBDqADmjBHdAD18A7sHath97TypoTzMD8O/MlSDYE+i2ZX15528vfVwAdnnIhGCDxlAvBAImnXAgGSDzlQjBA4ikXggEST7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUywbBPN6U338uoqvHzuuAb8BTLgQDJJ5y+aRHsiqi3d2hfw7wDXjK5TOCeSpXvrtc3pfnyfHnu/0ppsG+3B56x2/KQ/1eb5o71eG+7Krjw2vG40u/C1jiKZetgzmU28v+xfvxWMsxjBf5vuya86v3nH0UHM5pY3lHMFjHUy7bBlNfpM3doLrAx2NVRLob1e/hx7n2favXXT817/V+zsO1jnfucsC5POWyYTAL31vGi37usWl6Z6jOqx69hmA+PqpNHX9/cwfi7oL1POWyUTD1d4mZT/TTJ/4WwTTfXSZ81+mcxz8hsIanXLYIpv5uEj7FVz+SnXmHOT2SJb1HOGCZp1z+P5jxzjFvuMjrsFqO6Lxg6vMmFN7c3zXGCizzlMtXBjN3fn5EO/68E8xR7z9lIRhiwVqectnwSz/wA3nKhWCAxFMuBAMknnIhGCDxlAvBAImnXAgGSDzlQjBA4ikXggEST7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQDKslH9/YIAlHoxPVQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category Name' ReferenceName='Category Name' ReferenceIdx='0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category Name Url' ReferenceName='Category Name Url' ReferenceIdx='1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category Description' ReferenceName='Category Description' ReferenceIdx='2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category Date Created' ReferenceName='Category Date Created' ReferenceIdx='3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3' ReferenceName='Column-3' ReferenceIdx='4'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3 Src' ReferenceName='Column-3 Src' ReferenceIdx='5'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3 Url' ReferenceName='Column-3 Url' ReferenceIdx='6'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4' ReferenceName='Column-4' ReferenceIdx='7'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4 Src' ReferenceName='Column-4 Src' ReferenceIdx='8'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-4 Url' ReferenceName='Column-4 Url' ReferenceIdx='9'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5' ReferenceName='Column-5' ReferenceIdx='10'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5 Src' ReferenceName='Column-5 Src' ReferenceIdx='11'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-5 Url' ReferenceName='Column-5 Url' ReferenceIdx='12'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Category Name' attr='text' name2='Category Name Url' attr2='href' /&gt;&lt;column name='Category Description' attr='text' /&gt;&lt;column name='Category Date Created' attr='text' /&gt;&lt;column name='Column-3' attr='text' name2='Column-3 Src' attr2='src' name3='Column-3 Url' attr3='href' /&gt;&lt;column name='Column-4' attr='text' name2='Column-4 Src' attr2='src' name3='Column-4 Url' attr3='href' /&gt;&lt;column name='Column-5' attr='text' name2='Column-5 Src' attr2='src' name3='Column-5 Url' attr3='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NExtractData_14" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NExtractData.DataTable>
+                                      <InOutArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">ExtractDataTable</CSharpReference>
+                                      </InOutArgument>
+                                    </uix:NExtractData.DataTable>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="238, 294, 1119, 100" DesignTimeScaleFactor="1" FriendlyName="'Category Name'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="36f5f052-d0d5-47c1-b950-423396197dc1" InformativeScreenshot="727ab746853ea52f6519b0eb62607436.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Categories - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,754" sap2010:WorkflowViewState.IdRef="ForEachRow_17">
+                                    <ui:ForEachRow.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,628" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_12" Version="V3">
+                                            <uix:NGoToUrl.Url>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">CurrentRow["Column-4 Url"].ToString()</CSharpValue>
+                                              </InArgument>
+                                            </uix:NGoToUrl.Url>
+                                          </uix:NGoToUrl>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_61" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Categories/Details/9cf23044-a6b2-4867-af55-dbb0707b2e1e" DesignTimeRectangle="335, 424, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="10f25231-cdee-44da-a633-cba9241d0f83" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZW7ccMwDEBzl1k0jtbwDPYWGkKN9/ACblyosRtXLj0AQvEjgSAo6gNHuQveHQvKDD6PkPIFiigqVBgVKowKFUaFCqNChVGhwvy+0Msdvg93aP32T2Fr6+D48PsVEKEvqA83ExSvbQkSdhbaNqan5uV3hE8JrS9+a7ieO1kBi4W+4Xi6QXV++/02JoUuwHo5PeHq94GiUPdMcEr/vdDHEyoq1D4LnwSzmMBustGZ0AQVGmIxMZI8ZkVibSz0OxeDUH7lmdqi+O6Cc3kLQvnpaBs8YT4BKtIWHU2hicsKdfmmp4+vwV1YfNFp3pT5QhkXzShu0YRG9gsF9kTBuYnGDEX7XLnmBjihtNlA7vnIbKGFPja+8mmRbhrQCsH7ophEA7boDioy1XkYobYm/qL7uqYmfv6Eoh6Z8+uFGqIiwncFJYmCLxE6dW5gP6EOl5+KFRPKBYqeFV6VsWhfaFHqTq88hfy2Xih95WnSMLEouC06KszEDU1Efz9PKifBNkQuzp5bEWsA12b6qvEl0r7p3jPjn1I6bU6YX6aBlrmt6IxZ2QsZck5Mdbg0s/CkOqkoT04Ugtblls9NhIacblF56FOAeidCla2oUGFUqDAqVBgVKowKFQXgByJRGuzqi/YZAAAAAElFTkSuQmCC" InformativeScreenshot="db4f8430704412e278a55596a9199f0c.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Category Details - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <uix:Target DesignTimeRectangle="277, 424, 46, 21" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='A' type='' class='' check:innerText='Delete' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFHSURBVFhH7ZPBDcIwDACRmIVxWIMZYIsO0Q97sEA/ffChn776ZADT2m5xHKdpKyECykmRCEljX+zs4E/IIqmRRVIji6TGB0WecL7UcLg+ef5ZXJGmhcOphr03HlDyluV8XeQO54bnTHW9o9C6pDaI3B4bL22hCIJBAmsmqYqYiXVwlC14aaHilZBIWYj9Ipb7/zCk0FwcYoUIBys6ntHhxxtPe3B9CuKLuN/36CqbFYnFIVaJ4FvhROTvCed7JYJrOkm1xxCJxyE2VwR/y3JPIyCCSVr750XicYjVb2Qs8RBAto2PIWL0tkNAZD4OsVgESywS0XMfq7XC1UZCrRW7gJ4FIpSQ9whxr76t/mFO/axExnNUUmUhzrXiR+MQhojsQxrB0nr7ZRJaZGC8lPfQZ7/fhBaU3/mVdUV+mCySGlkkNf5EBOAFhHxsUXbl/R4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_15">
+                                            <ueab:WriteCellX.Cell>
+                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">Excel.Sheet["Test Results"].Cell["C11"]</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Cell>
+                                            <ueab:WriteCellX.Value>
+                                              <InArgument x:TypeArguments="x:Object">
+                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">"TRUE"</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Value>
+                                          </ueab:WriteCellX>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEachRow.Body>
+                                    <ui:ForEachRow.DataTable>
+                                      <InArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">ExtractDataTable</CSharpValue>
+                                      </InArgument>
+                                    </ui:ForEachRow.DataTable>
+                                  </ui:ForEachRow>
+                                </Sequence>
+                                <Sequence DisplayName="Device Sequence" sap:VirtualizedContainerService.HintSize="592,1289" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
+                                      <Variable.Default>
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">new System.Data.DataTable();</CSharpValue>
+                                      </Variable.Default>
+                                    </Variable>
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Devices'" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NClick_62" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Categories/Details/9cf23044-a6b2-4867-af55-dbb0707b2e1e" DesignTimeRectangle="8, 432, 200, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Devices'" FullSelectorArgument="&lt;webctrl aaname='Devices' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Devices' tag='A' type='' class='nav-link text-dark' check:innerText='Devices' /&gt;" Guid="5e975481-b7d0-4581-9886-ff9fd51e7719" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVHhe7di9cdtAFEVhF+XIkWKFSlSBYs6wAzVAlqAOpA7YAjtQD3YDa0G4F9gFHt5obIAemufNfIHwRwV7tKC+ecrHvP/6CSDgUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS7XGsy5PD/cle8/7sr94RycB9bhUS7rBPOy6xdv5Ok1vuevnI/l3p+xe4uvAVbgUS7bB9Pbl5fgvj/HDoPL8CiXlYN5OJbTcHxc1J/YCXCFPMply2A6dTTtLjPdlYad4nU/HKtf506HRx3vnvNWnqb3za6z6nPrV7npuU712bbJKyWuhke5bB1MvYAfy/O5OzbZeSr94q/OD7vS9FgcTPxqqCiCGL5ynmBum0e5/INghoXpgKpjun+4x8+rdoZ+AQfBVAu+juh0OH4EkUfYPbPdwfp7AY9yuXww488RLdYhkElkw/PnweQLfrw+8vmM2esauwsuHky1UHUufm2y+Wtbt5h9z7hzzIMZnxsEE8TQGHadICz+WXHTPMply2DaxTffCapXssBw3W6v59TXz4PJX8mq3+WLASz/EcAt8SiXlYNZ0izS4K+4NK9A011hIcYxjup7SqPfcRZfBfXcpfN1fLg9HuWydTBLX6Djxd1+Z2ivac9FwfRmv0sdWrULTc9HwRALPMplnWCA/5VHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDTTym/AWyw9nvAQc6NAAAAAElFTkSuQmCC" InformativeScreenshot="fbc40063632847d057b0bde054dc662e.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Category Details - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target DesignTimeRectangle="8, 359, 200, 40" ElementType="Text" FriendlyName="'Categories'" FullSelectorArgument="&lt;webctrl aaname='Categories' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Categories' tag='A' type='' class='nav-link text-dark' check:innerText='Categories' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMcSURBVHhe7ZfBcdswEEVTVE455eyjL65AZ8+4Azdgl+AOrA7cgjpID0kDDCHuBwEQWIoRJxbp92feQQIgUTP7sKtvStfn15/fAFBBMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QBsBDMV0QZjHvT933Hz97nrq32jrsCsV0WVmY02t3dy6mnMN7Ze9GeXvU73ronk/1PbAfFNNlPWHGQpqyRJiPl4fh3OOxuv7p0GG+FIrpso4wscgD96/dR7reF9jlwpy653v7nFsVBr4UiumyhjDH7tCSpaDWhe5eTsN6Y5yL65Xz6VrtMw7v47Ple5NnFpmg6bljlDiIP14OeYfJLo1AIfxknZFuEyimywrCxBFlbvRKukfBuZhdYWbOhs9vnBdxX/K8E6LwFaF6WsI0x1GTZipLAGG2gGK6XC9MWgxL/qsEYqHFQm2MZLHIkyLTe3Z2LNqxkNNnm4iXdsOJ9KkwrU5i7yeixt8f3xv2TH8nbAXFdPmfHaZ10/bMCNM8dyYUZUO0bLQKwpSv5/e1RysTxutYEnyyh+6yFRTTZQVh0lGoKK6MtGhs36UdpjnynAnF1yrwQoTkWS8VJt83FcaXudZ1RsrPhttDMV3W+NOfFHmgciOHoomFFddr49Fch2ndzOkz2M3fkxbzUJy17+xxRrI5YZZ02IH6b4TbRDFd1hAmkNzwFTJhaiTFW3aT8sYviUXqjkZJ4Xv74nMsECaTNUdnWx3yMsHgM1FMl7WEGahLMd74aeGEYpqOZIFcjrFg64WZFl3+/eF7G4U/Ox4tEWagJoXO1taQZRsopsu6wtwci8clgBzFdNmRMH3XODS6RNkNAC5FMV32JUw5Zgm6C/wriumyd2HoLHAdiumy8/8wAFeimC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+ChmC4IA+AxpOv+Avrq7eEJ9xenAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Device Name' ReferenceName='Device Name' ReferenceIdx='0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Device Name Url' ReferenceName='Device Name Url' ReferenceIdx='1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Is Active' ReferenceName='Is Active' ReferenceIdx='3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Date Created' ReferenceName='Date Created' ReferenceIdx='4'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category' ReferenceName='Category' ReferenceIdx='5'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Zone' ReferenceName='Zone' ReferenceIdx='6'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-6' ReferenceName='Column-6' ReferenceIdx='7'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-6 Src' ReferenceName='Column-6 Src' ReferenceIdx='8'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-6 Url' ReferenceName='Column-6 Url' ReferenceIdx='9'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7' ReferenceName='Column-7' ReferenceIdx='10'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7 Src' ReferenceName='Column-7 Src' ReferenceIdx='11'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-7 Url' ReferenceName='Column-7 Url' ReferenceIdx='12'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8' ReferenceName='Column-8' ReferenceIdx='13'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8 Src' ReferenceName='Column-8 Src' ReferenceIdx='14'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-8 Url' ReferenceName='Column-8 Url' ReferenceIdx='15'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Device Name' attr='text' name2='Device Name Url' attr2='href' /&gt;&lt;column name='Status' attr='text' /&gt;&lt;column name='Is Active' attr='text' /&gt;&lt;column name='Date Created' attr='text' /&gt;&lt;column name='Category' attr='text' /&gt;&lt;column name='Zone' attr='text' /&gt;&lt;column name='Column-6' attr='text' name2='Column-6 Src' attr2='src' name3='Column-6 Url' attr3='href' /&gt;&lt;column name='Column-7' attr='text' name2='Column-7 Src' attr2='src' name3='Column-7 Url' attr3='href' /&gt;&lt;column name='Column-8' attr='text' name2='Column-8 Src' attr2='src' name3='Column-8 Url' attr3='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="530,166" sap2010:WorkflowViewState.IdRef="NExtractData_15" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                    <uix:NExtractData.DataTable>
+                                      <InOutArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">ExtractDataTable</CSharpReference>
+                                      </InOutArgument>
+                                    </uix:NExtractData.DataTable>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="238, 269, 1119, 100" DesignTimeScaleFactor="1" FriendlyName="'Device Name Status'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="04979a10-e1f8-4efa-bd38-f2abd2431cac" InformativeScreenshot="77cb88bdcbfcc72b21a057f0f69fb0b8.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Devices - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,754" sap2010:WorkflowViewState.IdRef="ForEachRow_18">
+                                    <ui:ForEachRow.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,628" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_13" Version="V3">
+                                            <uix:NGoToUrl.Url>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">CurrentRow["Column-7 Url"].ToString()</CSharpValue>
+                                              </InArgument>
+                                            </uix:NGoToUrl.Url>
+                                          </uix:NGoToUrl>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_63" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Devices/Details/159a9438-b7ce-4101-a360-cc5cd1109fed" DesignTimeRectangle="335, 504, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="09f1c2e0-f344-483e-bd02-241ae92c18b1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZW7ccMwDEBzl1k0jtbwDPYWGkKN9/ACblyosRtXLj0AQvEjgSAo6gNHuQveHQvKDD6PkPIFiigqVBgVKowKFUaFCqNChVGhwvy+0Msdvg93aP32T2Fr6+D48PsVEKEvqA83ExSvbQkSdhbaNqan5uV3hE8JrS9+a7ieO1kBi4W+4Xi6QXV++/02JoUuwHo5PeHq94GiUPdMcEr/vdDHEyoq1D4LnwSzmMBustGZ0AQVGmIxMZI8ZkVibSz0OxeDUH7lmdqi+O6Cc3kLQvnpaBs8YT4BKtIWHU2hicsKdfmmp4+vwV1YfNFp3pT5QhkXzShu0YRG9gsF9kTBuYnGDEX7XLnmBjihtNlA7vnIbKGFPja+8mmRbhrQCsH7ophEA7boDioy1XkYobYm/qL7uqYmfv6Eoh6Z8+uFGqIiwncFJYmCLxE6dW5gP6EOl5+KFRPKBYqeFV6VsWhfaFHqTq88hfy2Xih95WnSMLEouC06KszEDU1Efz9PKifBNkQuzp5bEWsA12b6qvEl0r7p3jPjn1I6bU6YX6aBlrmt6IxZ2QsZck5Mdbg0s/CkOqkoT04Ugtblls9NhIacblF56FOAeidCla2oUGFUqDAqVBgVKowKFQXgByJRGuzqi/YZAAAAAElFTkSuQmCC" InformativeScreenshot="6d8486f83668743ee642d5f067fb2efa.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Device Details - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <uix:Target DesignTimeRectangle="277, 504, 46, 21" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='A' type='' class='' check:innerText='Delete' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFHSURBVFhH7ZPBDcIwDACRmIVxWIMZYIsO0Q97sEA/ffChn776ZADT2m5xHKdpKyECykmRCEljX+zs4E/IIqmRRVIji6TGB0WecL7UcLg+ef5ZXJGmhcOphr03HlDyluV8XeQO54bnTHW9o9C6pDaI3B4bL22hCIJBAmsmqYqYiXVwlC14aaHilZBIWYj9Ipb7/zCk0FwcYoUIBys6ntHhxxtPe3B9CuKLuN/36CqbFYnFIVaJ4FvhROTvCed7JYJrOkm1xxCJxyE2VwR/y3JPIyCCSVr750XicYjVb2Qs8RBAto2PIWL0tkNAZD4OsVgESywS0XMfq7XC1UZCrRW7gJ4FIpSQ9whxr76t/mFO/axExnNUUmUhzrXiR+MQhojsQxrB0nr7ZRJaZGC8lPfQZ7/fhBaU3/mVdUV+mCySGlkkNf5EBOAFhHxsUXbl/R4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_16">
+                                            <ueab:WriteCellX.Cell>
+                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">Excel.Sheet["Test Results"].Cell["C16"]</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Cell>
+                                            <ueab:WriteCellX.Value>
+                                              <InArgument x:TypeArguments="x:Object">
+                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">"TRUE"</CSharpValue>
+                                              </InArgument>
+                                            </ueab:WriteCellX.Value>
+                                          </ueab:WriteCellX>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEachRow.Body>
+                                    <ui:ForEachRow.DataTable>
+                                      <InArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">ExtractDataTable</CSharpValue>
+                                      </InArgument>
+                                    </ui:ForEachRow.DataTable>
+                                  </ui:ForEachRow>
+                                </Sequence>
+                              </Sequence>
+                              <Sequence DisplayName="Edit sequence" sap:VirtualizedContainerService.HintSize="702,5702" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
                                     <Variable.Default>
@@ -863,7 +1132,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <Sequence DisplayName="Edit Device sequence" sap:VirtualizedContainerService.HintSize="592,1972" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                <Sequence DisplayName="Edit Device sequence" sap:VirtualizedContainerService.HintSize="592,1764" sap2010:WorkflowViewState.IdRef="Sequence_59">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -890,13 +1159,13 @@
                                       <uix:TargetAnchorable DesignTimeRectangle="238, 269, 1119, 496" DesignTimeScaleFactor="1" FriendlyName="'Device Name Status'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="c1ba7933-4e91-48de-bf8d-172e44ef75e9" InformativeScreenshot="084116c9a226f0ceecee7e238d5720e8.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Devices - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                                     </uix:NExtractData.Target>
                                   </uix:NExtractData>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1436" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1228" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1310" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1102" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -947,18 +1216,6 @@
                                               </uix:TargetAnchorable>
                                             </uix:NClick.Target>
                                           </uix:NClick>
-                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_5">
-                                            <ueab:WriteCellX.Cell>
-                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
-                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">Excel.Sheet["Test Results"].Cell["C16"]</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Cell>
-                                            <ueab:WriteCellX.Value>
-                                              <InArgument x:TypeArguments="x:Object">
-                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">"TRUE"</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Value>
-                                          </ueab:WriteCellX>
                                           <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_6">
                                             <ueab:WriteCellX.Cell>
                                               <InArgument x:TypeArguments="ue:IReadWriteCellRef">
@@ -981,7 +1238,7 @@
                                     </ui:ForEachRow.DataTable>
                                   </ui:ForEachRow>
                                 </Sequence>
-                                <Sequence DisplayName="Edit Zone sequence" sap:VirtualizedContainerService.HintSize="592,1972" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                <Sequence DisplayName="Edit Zone sequence" sap:VirtualizedContainerService.HintSize="592,1764" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1008,13 +1265,13 @@
                                       <uix:TargetAnchorable DesignTimeRectangle="238, 294, 1119, 496" DesignTimeScaleFactor="1" FriendlyName="'Zone Name'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="f0128999-03d8-4bca-90c4-4374d83220b1" InformativeScreenshot="9c84ebdda4fa19f83e6d1db9e00d7552.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zones - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                                     </uix:NExtractData.Target>
                                   </uix:NExtractData>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1436" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1228" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1310" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1102" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1065,18 +1322,6 @@
                                               </uix:TargetAnchorable>
                                             </uix:NClick.Target>
                                           </uix:NClick>
-                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_7">
-                                            <ueab:WriteCellX.Cell>
-                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
-                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">Excel.Sheet["Test Results"].Cell["C2"]</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Cell>
-                                            <ueab:WriteCellX.Value>
-                                              <InArgument x:TypeArguments="x:Object">
-                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">"TRUE"</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Value>
-                                          </ueab:WriteCellX>
                                           <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_8">
                                             <ueab:WriteCellX.Cell>
                                               <InArgument x:TypeArguments="ue:IReadWriteCellRef">
@@ -1099,7 +1344,7 @@
                                     </ui:ForEachRow.DataTable>
                                   </ui:ForEachRow>
                                 </Sequence>
-                                <Sequence DisplayName="Edit Category sequence" sap:VirtualizedContainerService.HintSize="592,1972" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                <Sequence DisplayName="Edit Category sequence" sap:VirtualizedContainerService.HintSize="592,1764" sap2010:WorkflowViewState.IdRef="Sequence_49">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1126,13 +1371,13 @@
                                       <uix:TargetAnchorable DesignTimeRectangle="238, 294, 1119, 298" DesignTimeScaleFactor="1" FriendlyName="'Category Name'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="1677457f-2da8-47b2-99cd-e7a8c9b99368" InformativeScreenshot="321e166c5b849f93306c56e76eab16cb.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Categories - Connected Office: Device Management' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                                     </uix:NExtractData.Target>
                                   </uix:NExtractData>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1436" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1228" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1310" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1102" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1183,18 +1428,6 @@
                                               </uix:TargetAnchorable>
                                             </uix:NClick.Target>
                                           </uix:NClick>
-                                          <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_9">
-                                            <ueab:WriteCellX.Cell>
-                                              <InArgument x:TypeArguments="ue:IReadWriteCellRef">
-                                                <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">Excel.Sheet["Test Results"].Cell["C11"]</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Cell>
-                                            <ueab:WriteCellX.Value>
-                                              <InArgument x:TypeArguments="x:Object">
-                                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">"TRUE"</CSharpValue>
-                                              </InArgument>
-                                            </ueab:WriteCellX.Value>
-                                          </ueab:WriteCellX>
                                           <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCellX_10">
                                             <ueab:WriteCellX.Cell>
                                               <InArgument x:TypeArguments="ue:IReadWriteCellRef">
@@ -1218,7 +1451,7 @@
                                   </ui:ForEachRow>
                                 </Sequence>
                               </Sequence>
-                              <Sequence DisplayName="Delete sequence" sap:VirtualizedContainerService.HintSize="702,4077" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                              <Sequence DisplayName="Delete sequence" sap:VirtualizedContainerService.HintSize="702,4076" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="sd:DataTable" Name="table" />
                                   <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
@@ -1469,6 +1702,24 @@
                                     </ui:ForEachRow.DataTable>
                                   </ui:ForEachRow>
                                 </Sequence>
+                              </Sequence>
+                              <Sequence DisplayName="Logout Sequence" sap:VirtualizedContainerService.HintSize="702,289" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Devices'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_64" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="206974de-e551-4525-9544-13675a1e4cc3" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones" DesignTimeRectangle="25, 516, 54, 21" DesignTimeScaleFactor="1" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' tag='B' type='' class='' check:innerText='Logout' /&gt;" Guid="01d894a4-f915-427b-9d9c-9da5df3058a2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAZCAYAAABggz2wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVFhH7ZTNFYIwDIAdypMnzxy5OIFn3mMDFpAR2AA2cAU2cAdcIFqgTUoaBJ8UX+HwHfpDmq9JOTyeDWyBXTQ0dtHQ2EVDY5uiRXKG4+lNnMOdzIdAUKI6/+hWs7WARCu4qtx/J4oBDUnF9plYine84nbpxykUZN/dzGsukNUkVp1D1K9dSz0/kCpT8j2C++eKCgFbyDeWJEOL1pDFrvUOk6R/UZIYXSeHtIFJYthCtAt60eF30hlTRMU5ZIaoFEi6XbsFsUU70eFY2udf1FkphX0AJjouiu39b6JTW5eMXUkYgS9a18T7cMZ0UQZPjmHkx38yWMHxfa7quUApHg9jzBVVkBvW8Bu0k1Pr0pvkZ9rrLdaZ6kkI1RvkJoouh9D2HllEtEjsqmA13e/HBwuJYvtYrFRNhTfRtSqp8fRG12cjog28ABFhBSLRFOrtAAAAAElFTkSuQmCC" InformativeScreenshot="00bc0297d1f8df2118ff34bbb8510bda.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Zones - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target DesignTimeRectangle="8, 432, 200, 40" ElementType="Text" FriendlyName="'Devices'" FullSelectorArgument="&lt;webctrl aaname='Devices' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Devices' tag='A' type='' class='nav-link text-dark' check:innerText='Devices' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVHhe7di9cdtAFEVhF+XIkWKFSlSBYs6wAzVAlqAOpA7YAjtQD3YDa0G4F9gFHt5obIAemufNfIHwRwV7tKC+ecrHvP/6CSDgUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS7XGsy5PD/cle8/7sr94RycB9bhUS7rBPOy6xdv5Ok1vuevnI/l3p+xe4uvAVbgUS7bB9Pbl5fgvj/HDoPL8CiXlYN5OJbTcHxc1J/YCXCFPMply2A6dTTtLjPdlYad4nU/HKtf506HRx3vnvNWnqb3za6z6nPrV7npuU712bbJKyWuhke5bB1MvYAfy/O5OzbZeSr94q/OD7vS9FgcTPxqqCiCGL5ynmBum0e5/INghoXpgKpjun+4x8+rdoZ+AQfBVAu+juh0OH4EkUfYPbPdwfp7AY9yuXww488RLdYhkElkw/PnweQLfrw+8vmM2esauwsuHky1UHUufm2y+Wtbt5h9z7hzzIMZnxsEE8TQGHadICz+WXHTPMply2DaxTffCapXssBw3W6v59TXz4PJX8mq3+WLASz/EcAt8SiXlYNZ0izS4K+4NK9A011hIcYxjup7SqPfcRZfBfXcpfN1fLg9HuWydTBLX6Djxd1+Z2ivac9FwfRmv0sdWrULTc9HwRALPMplnWCA/5VHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDjUS4EA2Q8yoVggIxHuRAMkPEoF4IBMh7lQjBAxqNcCAbIeJQLwQAZj3IhGCDTTym/AWyw9nvAQc6NAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
                               </Sequence>
                             </Sequence>
                           </ActivityAction>
